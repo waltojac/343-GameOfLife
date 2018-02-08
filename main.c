@@ -1,3 +1,17 @@
+/*
+ * Game of Life
+ *
+ * Author: Jacob Walton
+ * Date: 2/8/2018
+ * Description: Simulation of Conway's Game of Life. Uses a dynamically
+ * allocated, 2D array to store the universe (board).
+ *
+ * Uses homemade file_utilities.c/.h files.
+ */
+
+
+
+
 #include <stdio.h>
 #include "file_utilities.h"
 #include <stdlib.h>
