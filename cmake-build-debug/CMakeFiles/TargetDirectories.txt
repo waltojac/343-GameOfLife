@@ -1,3 +1,3 @@
-/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jacobwalton/Documents/Senior/cis343/gameOfLife
+# Install script for directory: /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

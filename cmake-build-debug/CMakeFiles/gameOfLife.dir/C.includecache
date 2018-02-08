@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.c
+file_utilities.h
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.h
+stdlib.h
+-
+stdio.h
+-
+
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.h
+
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/main.c
+stdio.h
+-
+file_utilities.h
+/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.h
+stdlib.h
+-
+string.h
+-
+

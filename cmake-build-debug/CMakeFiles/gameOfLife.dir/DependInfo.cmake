@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/file_utilities.c" "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir/file_utilities.c.o"
-  "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/main.c" "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir/main.c.o"
+  "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.c" "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir/file_utilities.c.o"
+  "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/main.c" "/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

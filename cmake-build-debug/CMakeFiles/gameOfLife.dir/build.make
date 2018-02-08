@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jacobwalton/Documents/Senior/cis343/gameOfLife
+CMAKE_SOURCE_DIR = /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gameOfLife.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/gameOfLife.dir/flags.make
 
 CMakeFiles/gameOfLife.dir/main.c.o: CMakeFiles/gameOfLife.dir/flags.make
 CMakeFiles/gameOfLife.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gameOfLife.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gameOfLife.dir/main.c.o   -c /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gameOfLife.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gameOfLife.dir/main.c.o   -c /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/main.c
 
 CMakeFiles/gameOfLife.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gameOfLife.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/main.c > CMakeFiles/gameOfLife.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/main.c > CMakeFiles/gameOfLife.dir/main.c.i
 
 CMakeFiles/gameOfLife.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gameOfLife.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/main.c -o CMakeFiles/gameOfLife.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/main.c -o CMakeFiles/gameOfLife.dir/main.c.s
 
 CMakeFiles/gameOfLife.dir/main.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/gameOfLife.dir/main.c.o.provides.build: CMakeFiles/gameOfLife.dir/mai
 
 CMakeFiles/gameOfLife.dir/file_utilities.c.o: CMakeFiles/gameOfLife.dir/flags.make
 CMakeFiles/gameOfLife.dir/file_utilities.c.o: ../file_utilities.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/gameOfLife.dir/file_utilities.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gameOfLife.dir/file_utilities.c.o   -c /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/file_utilities.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/gameOfLife.dir/file_utilities.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gameOfLife.dir/file_utilities.c.o   -c /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.c
 
 CMakeFiles/gameOfLife.dir/file_utilities.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gameOfLife.dir/file_utilities.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/file_utilities.c > CMakeFiles/gameOfLife.dir/file_utilities.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.c > CMakeFiles/gameOfLife.dir/file_utilities.c.i
 
 CMakeFiles/gameOfLife.dir/file_utilities.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gameOfLife.dir/file_utilities.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/file_utilities.c -o CMakeFiles/gameOfLife.dir/file_utilities.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.c -o CMakeFiles/gameOfLife.dir/file_utilities.c.s
 
 CMakeFiles/gameOfLife.dir/file_utilities.c.o.requires:
 
@@ -117,7 +117,7 @@ gameOfLife: CMakeFiles/gameOfLife.dir/main.c.o
 gameOfLife: CMakeFiles/gameOfLife.dir/file_utilities.c.o
 gameOfLife: CMakeFiles/gameOfLife.dir/build.make
 gameOfLife: CMakeFiles/gameOfLife.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable gameOfLife"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable gameOfLife"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gameOfLife.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/gameOfLife.dir/clean:
 .PHONY : CMakeFiles/gameOfLife.dir/clean
 
 CMakeFiles/gameOfLife.dir/depend:
-	cd /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jacobwalton/Documents/Senior/cis343/gameOfLife /Users/jacobwalton/Documents/Senior/cis343/gameOfLife /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/cmake-build-debug/CMakeFiles/gameOfLife.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gameOfLife.dir/depend
 
