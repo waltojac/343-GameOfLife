@@ -33,14 +33,13 @@ int read_file( char* filename, char **buffer ){
 
         //close file
         fclose(input);
+
     }else{
         fprintf(stderr,"Error on file open: %d", errno);
         return errno;
     }
 
-
     return 0;
-
 }
 
 /*

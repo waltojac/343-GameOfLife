@@ -82,6 +82,7 @@ int main(int argc, char * argv[]) {
             //quit
             case 5:
                 freeBoard(&board, height, width);
+                printf("\nQuitting...\n");
                 flag = 0;
                 break;
         }
@@ -311,6 +312,7 @@ int loadBoard(char* filename, char *** board, int * height, int * width){
     }
 
     printBoard(*board, *height, *width);
+    free(buffer);
 
     return 0;
 
