@@ -20,29 +20,29 @@ int main(int argc, char * argv[]) {
     int width = 0, height = 0;
     char ** board;
     int flag = 1;
-    loadBoard("test.txt", &board, &height, &width);
+    loadBoard("default.txt", &board, &height, &width);
     int valid = 1;
 
     int input = 0;
     while(flag){
-        printf("\n----------Enter you selection----------\n");
-        printf("1: Save     2: Load     3: Run 1 generation\n");
-        printf("4: Run x generations    5: Quit\n");
+        printf("\n-------------Enter you selection-------------\n");
+        printf("1: Save        2: Load        3: Run 1 gen\n");
+        printf("4: Run x gen   5: New Board   6: Quit\n");
 
         char * strNum = (char*)malloc(sizeof(char)*2);
 
         while(valid){
             scanf("%s", strNum);
             input = atoi(strNum);
-            if ((input > 0) && input < 6){
+            if ((input > 0) && input < 7){
                 valid = 0;
                 break;
             }
             fflush(stdin);
-            printf("\nPlease enter a vaild input.");
-            printf("\n----------Enter you selection----------\n");
-            printf("1: Save     2: Load     3: Run 1 generation\n");
-            printf("4: Run x generations    5: Quit\n");
+            printf("\nPlease enter a valid input.\n");
+            printf("\n-------------Enter you selection-------------\n");
+            printf("1: Save        2: Load        3: Run 1 gen\n");
+            printf("4: Run x gen   5: New Board   6: Quit\n");
         }
         valid = 1;
 
@@ -79,12 +79,28 @@ int main(int argc, char * argv[]) {
                 runGeneration(&board, height, width, itr);
                 break;
 
-            //quit
+            //resize board
             case 5:
+                printf("\nEnter height: ");
+                scanf("%d", &height);
+                printf("\nEnter width: ");
+                scanf("%d", &width);
+                allocateBoard(&board, height, width);
+                populateBoard(&board, height, width);
+
+                printf("\nNew Board Created.\n\n");
+                printBoard(board, height, width);
+                printf("\nPlease save now to keep board.\n");
+                break;
+
+            //quit
+            case 6:
                 freeBoard(&board, height, width);
                 printf("\nQuitting...\n");
+                free(str);
                 flag = 0;
                 break;
+
         }
     }
 

@@ -26,6 +26,7 @@ int read_file( char* filename, char **buffer ){
         *buffer = (char *)malloc((fsize+1L)*sizeof(char));
 
         //show the filesize
+        printf("File %s loaded successfully.\n", filename);
         printf("Filesize: %ld\n", fsize);
 
         //reads the file into buffer
