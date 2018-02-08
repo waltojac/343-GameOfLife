@@ -13,6 +13,8 @@ stdlib.h
 -
 stdio.h
 -
+errno.h
+-
 
 /Users/jacobwalton/Documents/Senior/cis343/gameOfLife/343-GameOfLife/file_utilities.h
 

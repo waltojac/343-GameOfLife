@@ -8,29 +8,84 @@ int populateBoard(char *** arr, int height, int width);
 int freeBoard(char *** arr, int height, int width);
 int allocateBoard(char *** arr, int height, int width);
 int printBoard(char ** board, int height, int width);
-int writeBoard(char *** board, int height, int width);
+int writeBoard(char * filename, char *** board, int height, int width);
 int loadBoard(char* filename, char *** board, int * height, int * width);
 int runGeneration(char *** board, int height, int width, int itr);
+int copyBoard(char *** board, char *** copy, int height, int width);
+
 
 int main(int argc, char * argv[]) {
 
     //game board dimensions
     int width = 0, height = 0;
     char ** board;
-
-    //allocateBoard(&board, height, width);
-
-
-    //loadBoard
+    int flag = 1;
     loadBoard("test.txt", &board, &height, &width);
+    int valid = 1;
 
-    printf("Height: %d, Width: %d\n\n", height, width);
+    int input = 0;
+    while(flag){
+        printf("\n----------Enter you selection----------\n");
+        printf("1: Save     2: Load     3: Run 1 generation\n");
+        printf("4: Run x generations    5: Quit\n");
 
-    //freeBoard(&board, height, width);
+        char * strNum = (char*)malloc(sizeof(char)*2);
 
-    runGeneration(&board, height, width, 3);
+        while(valid){
+            scanf("%s", strNum);
+            input = atoi(strNum);
+            if ((input > 0) && input < 6){
+                valid = 0;
+                break;
+            }
+            fflush(stdin);
+            printf("\nPlease enter a vaild input.");
+            printf("\n----------Enter you selection----------\n");
+            printf("1: Save     2: Load     3: Run 1 generation\n");
+            printf("4: Run x generations    5: Quit\n");
+        }
+        valid = 1;
 
 
+        //temp input values
+        char * str = (char*)malloc(sizeof(char)*20);
+        int itr = 0;
+
+        switch (input) {
+
+            //write file
+            case 1:
+                printf("\nEnter filename: ");
+                scanf("%s", str);
+                writeBoard(str, &board, height, width);
+                break;
+
+            //load file
+            case 2:
+                printf("\nEnter filename: ");
+                scanf("%s", str);
+                loadBoard(str, &board, &height, &width);
+                break;
+
+            //run 1 generation
+            case 3:
+                runGeneration(&board, height, width, 1);
+                break;
+
+            //run x generations
+            case 4:
+                printf("\nEnter x: ");
+                scanf("%d", &itr);
+                runGeneration(&board, height, width, itr);
+                break;
+
+            //quit
+            case 5:
+                freeBoard(&board, height, width);
+                flag = 0;
+                break;
+        }
+    }
 
     return 0;
 }
@@ -44,7 +99,7 @@ int copyBoard(char *** board, char *** copy, int height, int width){
             (*copy)[i][j] = (*board)[i][j];
         }
     }
-
+    return 0;
 }
 
 
@@ -54,10 +109,6 @@ int runGeneration(char *** board, int height, int width, int itr){
     char ** copy;
     copyBoard(board, &copy, height, width);
 
-
-    printf("\n");
-    //print board
-    printBoard(copy,height,width);
     printf("\n");
 
     while(itr){
@@ -113,30 +164,6 @@ int runGeneration(char *** board, int height, int width, int itr){
     return 0;
 }
 
-
-/*
-void testing(char ** board, int height, int width){
-    //grab user input
-    printf("\nEnter height: ");
-    scanf("%d", &height);
-    printf("\nEnter width: ");
-    scanf("%d", &width);
-
-    //allocate the board
-    allocateBoard(&board, height, width);
-
-    //populateBoard
-    populateBoard(&board,height,width);
-
-    //print board
-    printBoard(board, height, width);
-
-    //write board
-    writeBoard(&board, height, width);
-
-    freeBoard(&board, height, width);
-}
-*/
 
 int populateBoard(char *** arr, int height, int width){
     //Add values to the board. Created on my own before seeing
@@ -198,14 +225,16 @@ int printBoard(char ** board, int height, int width){
  *
  * Returns 1 or 2 on game board to high or wide (256), respectively.
  */
-int writeBoard(char *** board, int height, int width) {
+int writeBoard(char * filename, char *** board, int height, int width) {
 
     int count = 0;
     char h;
     char w;
 
+    //allocate input buffer
     char *buffer = (char *) malloc(sizeof(char)*height*width+2);
 
+    //check for error due to size of char limitations when converting from ASCII to int
     //add height and width to array
     if (height < 256) {
         h = height;
@@ -219,6 +248,7 @@ int writeBoard(char *** board, int height, int width) {
     buffer[count] = h;
     count++;
 
+    //check for error due to size of char limitations when converting from ASCII to int
     if (width <256) {
         w = width;
     } else{
@@ -244,24 +274,34 @@ int writeBoard(char *** board, int height, int width) {
         count++;
     }
 
-    write_file("test.txt", buffer, height);
+    write_file(filename, buffer, height);
+    free(buffer);
     return 0;
 }
 
 
 int loadBoard(char* filename, char *** board, int * height, int * width){
-    FILE * fp = fopen(filename,"r");
     int count = 3;
-
+    int flag = 0;
     char *buffer;
 
-    read_file(filename, &buffer);
+    //read the file into buffer
+    flag = read_file(filename, &buffer);
 
+    //check for error on file read
+    if (flag)
+    {
+        printf("\nFile %s not able to open.\n", filename);
+        return 1;
+    }
+
+    //grab height and width from first 2 spots in input buffer.
     *height = buffer[0];
     *width = buffer[1];
 
     allocateBoard(board, *height, *width);
 
+    //copy the buffer into the board.
     for(int i = 0; i < *height; i++){
         for(int j = 0; j < *width; j++){
             (*board)[i][j] = buffer[count];
