@@ -112,6 +112,7 @@ int main(int argc, char * argv[]) {
                 freeBoard(&board, height, width);
                 printf("\nQuitting...\n");
                 free(str);
+                free(strNum);
                 flag = 0;
                 break;
 
